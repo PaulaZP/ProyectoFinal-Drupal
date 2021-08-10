@@ -1,0 +1,18 @@
+uuid: 6c53ecce-99f5-445c-961e-dc52f3b34c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.noticias
+id: node.noticias.title
+field_name: title
+entity_type: node
+bundle: noticias
+label: Titulo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

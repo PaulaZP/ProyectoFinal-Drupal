@@ -1,0 +1,28 @@
+uuid: 61594a9e-5a5b-4cc4-8011-d0dc1f8d7b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.noticias.body
+    - node.type.noticias
+  module:
+    - text
+    - user
+id: node.noticias.default
+targetEntityType: node
+bundle: noticias
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

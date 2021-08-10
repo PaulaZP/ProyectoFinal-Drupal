@@ -32,6 +32,7 @@
         "drupal/slick": "^2.3",
         "drupal/token": "^1.9",
         "drupal/twig_tweak": "^2.9",
+        "drupal/video_embed_field": "^2.4",
         "drupal/viewsreference": "^1.7",
         "drupal/xmlsitemap": "^1.0",
         "drupal/yoast_seo": "^1.7",

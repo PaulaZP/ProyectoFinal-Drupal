@@ -1,0 +1,21 @@
+uuid: 9795735c-1e6e-4890-a545-5df9152a4a63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resumen
+    - node.type.noticias
+  module:
+    - text
+id: node.noticias.field_resumen
+field_name: field_resumen
+entity_type: node
+bundle: noticias
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

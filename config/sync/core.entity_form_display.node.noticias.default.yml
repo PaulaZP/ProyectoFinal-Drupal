@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.noticias.body
+    - field.field.node.noticias.field_imagen
+    - field.field.node.noticias.field_resumen
+    - field.field.node.noticias.field_ti
+    - image.style.thumbnail
     - node.type.noticias
   module:
+    - image
     - path
     - text
 id: node.noticias.default
@@ -13,22 +17,36 @@ targetEntityType: node
 bundle: noticias
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_imagen:
+    weight: 121
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_resumen:
+    weight: 123
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ti:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 30

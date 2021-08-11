@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.noticias.body
+    - field.field.node.noticias.field_imagen
+    - field.field.node.noticias.field_resumen
+    - field.field.node.noticias.field_ti
     - node.type.noticias
   module:
+    - image
     - text
     - user
 id: node.noticias.teaser
@@ -14,17 +17,29 @@ targetEntityType: node
 bundle: noticias
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_imagen:
+    type: image
+    weight: 1
     region: content
-  links:
-    weight: 100
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_resumen:
+    type: text_default
+    weight: 2
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  field_ti:
+    type: string
+    weight: 0
     region: content
-hidden: {  }
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  links: true

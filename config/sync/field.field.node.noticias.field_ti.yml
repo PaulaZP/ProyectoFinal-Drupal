@@ -1,0 +1,19 @@
+uuid: e950ea63-33a4-4c5a-84ad-6d78ce311755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ti
+    - node.type.noticias
+id: node.noticias.field_ti
+field_name: field_ti
+entity_type: node
+bundle: noticias
+label: 'Título teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -8,6 +8,7 @@ dependencies:
     - field.field.taxonomy_term.categorizacion.field_icono
     - taxonomy.vocabulary.categorizacion
   module:
+    - media_library
     - path
     - text
 id: taxonomy_term.categorizacion.default
@@ -40,12 +41,9 @@ content:
   field_icono:
     weight: 1
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   name:
     type: string_textfield

@@ -1,0 +1,22 @@
+uuid: 7e8b2632-c6b2-4aed-acb4-005a11e5081a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.documento.field_documento
+    - paragraphs.paragraphs_type.documento
+id: paragraph.documento.default
+targetEntityType: paragraph
+bundle: documento
+mode: default
+content:
+  field_documento:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

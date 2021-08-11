@@ -1,0 +1,10 @@
+uuid: 89557883-c240-4454-b00d-5413261448e2
+langcode: en
+status: true
+dependencies: {  }
+id: enlaces
+label: Enlaces
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

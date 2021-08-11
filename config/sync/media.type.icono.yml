@@ -1,0 +1,13 @@
+uuid: 86a764bc-55f7-40ca-b9e2-d83ebdbc8fe2
+langcode: en
+status: true
+dependencies: {  }
+id: icono
+label: Icono
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map: {  }

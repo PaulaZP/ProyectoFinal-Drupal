@@ -1,0 +1,29 @@
+uuid: 922422e8-b7ff-4195-8a46-e3d71a469fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icono.field_media_image_1
+    - image.style.large
+    - media.type.icono
+  module:
+    - image
+id: media.icono.default
+targetEntityType: media
+bundle: icono
+mode: default
+content:
+  field_media_image_1:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,71 @@
+uuid: 824c609a-19e5-4015-9636-b873cd386f31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categorizacion.field_descripcion
+    - field.field.taxonomy_term.categorizacion.field_destacada
+    - field.field.taxonomy_term.categorizacion.field_icono
+    - taxonomy.vocabulary.categorizacion
+  module:
+    - path
+    - text
+id: taxonomy_term.categorizacion.default
+targetEntityType: taxonomy_term
+bundle: categorizacion
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_descripcion:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_destacada:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_icono:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+hidden: {  }

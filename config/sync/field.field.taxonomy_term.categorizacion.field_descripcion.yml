@@ -1,0 +1,21 @@
+uuid: 7f0cf770-5b00-41c8-8a10-7dd96d7ed4b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_descripcion
+    - taxonomy.vocabulary.categorizacion
+  module:
+    - text
+id: taxonomy_term.categorizacion.field_descripcion
+field_name: field_descripcion
+entity_type: taxonomy_term
+bundle: categorizacion
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

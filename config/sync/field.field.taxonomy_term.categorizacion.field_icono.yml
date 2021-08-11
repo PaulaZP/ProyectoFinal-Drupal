@@ -1,0 +1,28 @@
+uuid: e815be38-9b5d-44d7-9a22-abb0d0d0d27d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icono
+    - media.type.icono
+    - taxonomy.vocabulary.categorizacion
+id: taxonomy_term.categorizacion.field_icono
+field_name: field_icono
+entity_type: taxonomy_term
+bundle: categorizacion
+label: Icono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icono: icono
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

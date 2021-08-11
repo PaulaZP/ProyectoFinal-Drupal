@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - node.type.noticias
   module:
+    - blazy
     - node
     - user
 id: _ultimas_noticias
@@ -53,16 +54,12 @@ display:
           items_per_page: 8
           offset: 0
       style:
-        type: grid
+        type: blazy
         options:
-          uses_fields: false
-          columns: 4
-          automatic_width: true
-          alignment: horizontal
-          col_class_default: true
-          col_class_custom: ''
-          row_class_default: true
-          row_class_custom: ''
+          style: column
+          grid: 4
+          grid_medium: null
+          grid_small: null
       row:
         type: 'entity:node'
         options:

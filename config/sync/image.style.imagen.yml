@@ -1,0 +1,14 @@
+uuid: d4639bae-1fe4-402b-8dce-6eb8c5c482e2
+langcode: en
+status: true
+dependencies: {  }
+name: imagen
+label: 'imagen teaser'
+effects:
+  6565df16-e5d7-4b97-9843-61f230b042e5:
+    uuid: 6565df16-e5d7-4b97-9843-61f230b042e5
+    id: image_resize
+    weight: 1
+    data:
+      width: 400
+      height: 230

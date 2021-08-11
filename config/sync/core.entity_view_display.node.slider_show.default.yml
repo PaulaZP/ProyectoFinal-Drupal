@@ -1,19 +1,29 @@
-uuid: 520b08b8-7af9-49ed-b87c-f09215441c7d
+uuid: 3f4bb118-b816-4a85-864c-abee6249ebe7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_slider.field_imagen
-    - paragraphs.paragraphs_type.image_slider
+    - field.field.node.slider_show.body
+    - field.field.node.slider_show.field_slide
+    - node.type.slider_show
   module:
     - slick
-id: paragraph.image_slider.default
-targetEntityType: paragraph
-bundle: image_slider
+    - text
+    - user
+id: node.slider_show.default
+targetEntityType: node
+bundle: slider_show
 mode: default
 content:
-  field_imagen:
-    weight: 0
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_slide:
+    weight: 102
     label: hidden
     settings:
       style: ''
@@ -68,4 +78,9 @@ content:
     third_party_settings: {  }
     type: slick_image
     region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

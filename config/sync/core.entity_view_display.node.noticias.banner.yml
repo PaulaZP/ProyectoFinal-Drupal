@@ -1,8 +1,9 @@
-uuid: 61594a9e-5a5b-4cc4-8011-d0dc1f8d7b8e
+uuid: d901eb2c-a54a-4588-b007-6c2f1a9ba6b7
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.banner
     - field.field.node.noticias.field_categorizacion
     - field.field.node.noticias.field_contenido
     - field.field.node.noticias.field_destacada
@@ -13,52 +14,29 @@ dependencies:
     - field.field.node.noticias.field_ti
     - node.type.noticias
   module:
-    - datetime
-    - entity_reference_revisions
     - image
-    - options
+    - layout_builder
     - text
     - user
-id: node.noticias.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.noticias.banner
 targetEntityType: node
 bundle: noticias
-mode: default
+mode: banner
 content:
   field_categorizacion:
-    weight: 104
+    type: entity_reference_label
+    weight: 3
+    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_contenido:
-    type: entity_reference_revisions_entity_view
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_destacada:
-    weight: 107
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_fecha:
-    weight: 108
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_imagen:
-    weight: 101
+    weight: 0
     label: above
     settings:
       image_style: ''
@@ -67,31 +45,23 @@ content:
     type: image
     region: content
   field_resumen:
-    weight: 103
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_tagstax:
-    weight: 106
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_ti:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_contenido: true
+  field_destacada: true
+  field_fecha: true
+  field_tagstax: true
+  links: true

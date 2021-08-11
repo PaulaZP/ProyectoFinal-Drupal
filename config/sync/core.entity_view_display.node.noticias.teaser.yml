@@ -34,7 +34,7 @@ content:
     third_party_settings: {  }
   field_imagen:
     type: image
-    weight: 1
+    weight: 0
     region: content
     label: above
     settings:
@@ -50,9 +50,9 @@ content:
     third_party_settings: {  }
   field_ti:
     type: string
-    weight: 0
+    weight: 1
     region: content
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.noticias.field_categorizacion
     - field.field.node.noticias.field_contenido
     - field.field.node.noticias.field_destacada
+    - field.field.node.noticias.field_fecha
     - field.field.node.noticias.field_imagen
     - field.field.node.noticias.field_resumen
     - field.field.node.noticias.field_tagstax
     - field.field.node.noticias.field_ti
     - node.type.noticias
   module:
+    - datetime
     - image
     - text
     - user
@@ -21,6 +23,15 @@ targetEntityType: node
 bundle: noticias
 mode: teaser
 content:
+  field_fecha:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_imagen:
     type: image
     weight: 1

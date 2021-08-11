@@ -1,0 +1,24 @@
+uuid: 30994fd9-1613-42df-a0fd-afdaefd8e494
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha
+    - node.type.noticias
+  module:
+    - datetime
+id: node.noticias.field_fecha
+field_name: field_fecha
+entity_type: node
+bundle: noticias
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

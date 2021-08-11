@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.noticias.field_categorizacion
     - field.field.node.noticias.field_contenido
     - field.field.node.noticias.field_destacada
+    - field.field.node.noticias.field_fecha
     - field.field.node.noticias.field_imagen
     - field.field.node.noticias.field_resumen
     - field.field.node.noticias.field_tagstax
@@ -13,6 +14,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.noticias
   module:
+    - datetime
     - image
     - paragraphs
     - path
@@ -55,6 +57,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_fecha:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_imagen:
     weight: 121

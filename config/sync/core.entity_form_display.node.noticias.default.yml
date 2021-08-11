@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.noticias.field_categorizacion
     - field.field.node.noticias.field_imagen
     - field.field.node.noticias.field_resumen
     - field.field.node.noticias.field_ti
@@ -23,6 +24,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_categorizacion:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_imagen:
     weight: 121
     settings:

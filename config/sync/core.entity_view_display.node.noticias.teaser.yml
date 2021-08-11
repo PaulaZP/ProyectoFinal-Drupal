@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.noticias.field_categorizacion
     - field.field.node.noticias.field_imagen
     - field.field.node.noticias.field_resumen
     - field.field.node.noticias.field_ti
@@ -42,4 +43,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_categorizacion: true
   links: true

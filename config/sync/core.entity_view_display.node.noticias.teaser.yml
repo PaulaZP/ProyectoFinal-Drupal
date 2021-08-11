@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.noticias.field_categorizacion
+    - field.field.node.noticias.field_contenido
+    - field.field.node.noticias.field_destacada
     - field.field.node.noticias.field_imagen
     - field.field.node.noticias.field_resumen
+    - field.field.node.noticias.field_tagstax
     - field.field.node.noticias.field_ti
     - node.type.noticias
   module:
@@ -44,4 +47,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_categorizacion: true
+  field_contenido: true
+  field_destacada: true
+  field_tagstax: true
   links: true

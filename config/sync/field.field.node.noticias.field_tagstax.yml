@@ -1,0 +1,29 @@
+uuid: 94b2db21-ba35-4d9d-a219-b73255ab2285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagstax
+    - node.type.noticias
+    - taxonomy.vocabulary.tags
+id: node.noticias.field_tagstax
+field_name: field_tagstax
+entity_type: node
+bundle: noticias
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

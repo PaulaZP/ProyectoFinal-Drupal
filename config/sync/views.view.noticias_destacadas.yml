@@ -6,8 +6,8 @@ dependencies:
     - core.entity_view_mode.node.banner
     - node.type.noticias
   module:
-    - blazy
     - node
+    - slick_views
     - user
 id: noticias_destacadas
 label: 'Noticias destacadas'
@@ -54,12 +54,43 @@ display:
           items_per_page: 4
           offset: 0
       style:
-        type: blazy
+        type: slick
         options:
-          style: grid
-          grid: 4
-          grid_medium: null
-          grid_small: null
+          vanilla: true
+          optionset: default
+          skin: fullwidth
+          layout: ''
+          caption:
+            title: '0'
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_position: ''
+          thumbnail_caption: ''
+          grid: 1
+          grid_medium: 1
+          grid_small: 1
+          visible_items: 1
+          preserve_keys: false
+          image: ''
+          thumbnail: ''
+          overlay: ''
+          title: ''
+          link: ''
+          class: ''
+          id: ''
+          override: true
+          overridables:
+            autoplay: autoplay
+            arrows: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          cache: 0
+          current_view_mode: block_1
+          thumbnail_effect: ''
       row:
         type: 'entity:node'
         options:

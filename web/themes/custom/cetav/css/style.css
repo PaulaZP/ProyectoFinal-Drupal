@@ -1,0 +1,20 @@
+.page-wrap{
+  background-color: rgb(255, 255, 255);
+}
+.header{
+  background-color: rgb(111, 122, 139);
+  padding: 40px;
+}
+.header a{
+  color: white;
+}
+.footer{
+  background-color: rgb(46, 51, 58);
+  padding: 20px;
+}
+.footer a{
+  color: white;
+}
+.footer li{
+  list-style: none;
+}

@@ -1,0 +1,12 @@
+name: Cetav
+type: theme
+description: 'Nuestro primer tema Cetav'
+core_version_requirement: ^8 || ^9
+libraries:
+  - cetav/cetav_css
+  - cetav/cetav_js
+regions:
+  header: Header
+  content: Content
+  sidebar_r: 'Sidebar Right'
+  footer: Footer

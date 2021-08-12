@@ -1,4 +1,4 @@
-uuid: 9d8741e9-71d1-46e2-869c-a0b9d3d266cd
+uuid: 21c09183-81b7-49bb-82eb-11fcd73f748c
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,9 @@ dependencies:
     - node.type.noticias
   module:
     - node
-    - slick_views
     - user
-id: noticias_destacadas
-label: 'Noticias destacadas'
+id: busqueda_noticias
+label: 'Búsqueda Noticias'
 module: views
 description: ''
 tag: ''
@@ -49,48 +48,25 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: some
+        type: mini
         options:
-          items_per_page: 4
+          items_per_page: 10
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
-        type: slick
-        options:
-          vanilla: true
-          optionset: default
-          skin: fullwidth
-          layout: ''
-          caption:
-            title: '0'
-          optionset_thumbnail: ''
-          skin_thumbnail: ''
-          thumbnail_position: ''
-          thumbnail_caption: ''
-          grid: 1
-          grid_medium: 1
-          grid_small: 1
-          visible_items: 1
-          preserve_keys: false
-          image: ''
-          thumbnail: ''
-          overlay: ''
-          title: ''
-          link: ''
-          class: ''
-          id: ''
-          override: true
-          overridables:
-            autoplay: autoplay
-            arrows: '0'
-            dots: '0'
-            draggable: '0'
-            infinite: '0'
-            mouseWheel: '0'
-            randomize: '0'
-            variableWidth: '0'
-          cache: 0
-          current_view_mode: block_1
-          thumbnail_effect: ''
+        type: default
       row:
         type: 'entity:node'
         options:
@@ -169,6 +145,49 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Title
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
       sorts:
         created:
           id: created
@@ -185,7 +204,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Noticias destacadas'
+      title: 'Búsqueda Noticias'
       header: {  }
       footer: {  }
       empty: {  }
@@ -197,22 +216,27 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: 'Banner noticias destacadas'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: ''
+      path: busqueda-noticias
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

@@ -1,0 +1,22 @@
+uuid: 5660a455-b9ff-46e2-bdf2-ac0314ee4d8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - cetav
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: cetav_help
+theme: cetav
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

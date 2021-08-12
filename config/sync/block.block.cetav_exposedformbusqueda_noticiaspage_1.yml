@@ -1,0 +1,29 @@
+uuid: fcd8a536-f60e-4f9a-b6ff-457dbe902e37
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.busqueda_noticias
+  module:
+    - system
+    - views
+  theme:
+    - cetav
+id: cetav_exposedformbusqueda_noticiaspage_1
+theme: cetav
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:busqueda_noticias-page_1'
+settings:
+  id: 'views_exposed_filter_block:busqueda_noticias-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/deportes\r\n/arteycultura\r\n/economia\r\n/politica\r\n/espectáculos\r\n/sucesos\r\n/salud\r\n/internacionales\r\n/salud\r\n/sucesos\r\n/internacionales"
+    negate: false
+    context_mapping: {  }

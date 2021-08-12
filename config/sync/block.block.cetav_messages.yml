@@ -1,0 +1,22 @@
+uuid: bf9f4696-4852-4ae0-aa6e-9926b696b520
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cetav
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: cetav_messages
+theme: cetav
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 58f37cfa-a3c1-47ea-822b-585c980c8e7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cetav
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: cetav_content
+theme: cetav
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

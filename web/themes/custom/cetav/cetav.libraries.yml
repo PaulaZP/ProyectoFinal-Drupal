@@ -1,0 +1,11 @@
+cetav_css:
+  css:
+    theme:
+      css/style.css: {}
+
+cetav_js:
+  js:
+    js/script.js:{}
+  dependecies:
+    - core/jquery
+

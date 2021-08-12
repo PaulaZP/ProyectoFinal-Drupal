@@ -32,9 +32,13 @@ content:
     third_party_settings: {  }
   field_categorizacion:
     weight: 124
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_contenido:
     type: entity_reference_paragraphs
